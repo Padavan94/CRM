@@ -1,0 +1,15 @@
+$brand : #ffd740;
+$brand2 : #3b4d6b;
+
+a,input[type='submit'], button{
+  display: inline-block;
+  transition: all .2s ease-in;
+  &:link,&:visited,&:hover,&:active{
+    text-decoration: none;
+  }
+}
+
+i{
+  display: inline-block;
+}
+

@@ -1,0 +1,487 @@
+/*
+* Third Party
+*/
+
+@import "../../bower_components/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
+
+/*
+* Custom
+*/
+
+@import "partials/variable";
+@import "partials/sprite";
+@import "partials/fonts";
+@import "partials/owl.carousel.scss";
+
+
+body{
+	font-family: "Roboto";
+	letter-spacing: .7px;
+}
+
+.flex-link{
+	display: flex;
+	align-items: center;
+}
+
+@import "partials/media";
+
+.title{
+	text-align: center;
+	margin-bottom: 45px;
+	h2{
+		margin: 0px;
+		color: #303030;
+		font-family: "Roboto-b";
+		text-transform: uppercase;
+		position: relative;
+		display: inline-block;
+		font-size: 28px;
+		letter-spacing: 3px;
+		&:after{
+			content:"";
+			position: absolute;
+			left: 50%;
+			margin-left: -10px;
+			height: 3px;
+			width: 20px;
+			background-color: #303030;
+			top: calc(100% + 7px);
+		}
+	}
+	&--white{
+		h2{
+			color: #fff;
+			&:after{
+				background-color: $brand;
+			}
+		}
+	}
+}
+
+.nav-menu{
+	box-shadow: 0 0 9px rgba(0, 0, 0, 0.58);
+	background-color: #fff;
+	&__container{
+		display: flex;
+		justify-content: flex-start;
+		align-items: center;
+	}
+	&__logo{
+		margin-right: 40px;
+		a{
+			color: #303030;
+			font-family: "Roboto-b";
+			font-size: 18px;
+			line-height: 13px;
+			text-transform: uppercase;
+			letter-spacing: 1.5px;
+			i{
+				@include sprite($logo);
+				margin-right: 14px;
+			}
+		}
+	}
+	&__phone{
+		margin-right: 	52px;
+		a{
+			border: 3px solid $brand;
+			border-radius: 7px;
+			font-size: 14px;
+			color: #303030;
+			padding: 6px 12px;
+			&:hover{
+				background-color: $brand;
+			}
+			span{
+				font-family: "Roboto-b";
+			}
+			i{
+				@include sprite($phone);
+				margin-right: 7px;
+			}
+		}
+	}
+	&__login{
+		a{
+			height: 57px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			color: #2f2f2f;
+			font-size: 14px;
+			padding: 5px 19px;
+			&:hover{
+				background-color: $brand;
+			}
+			i{
+				@include sprite($login-icon);
+				margin-right: 8px;
+			}
+		}
+	}
+	&__reg{
+		@extend .nav-menu__login;
+		margin-right: 73px;
+		a{
+			i{
+				@include sprite($registration-icon);
+				margin-right: 8px;
+			}
+		}
+	}
+	&__catalog{
+		margin-right: 19px;
+		button{
+			background-color: #ecf0f0;
+			border-radius: 0px;
+			border: none;
+			color: #303030;
+			font-size: 	16px;
+			height: 57px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			padding: 5px 19px;
+			font-family: "Roboto-b";
+			i{
+				@include sprite($arrow);
+				margin-left: 6px;
+			}
+		}
+	}
+	&__quest{
+		a{
+			font-size: 16px;
+			color: #303030;
+			font-weight: bold;
+			&:hover{
+				color: $brand;
+			}
+		}
+	}
+}
+
+.main-section{
+	min-height: 571px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	&__title{
+		margin-bottom: 3px;
+		h1{
+			margin: 0px;
+			font-family: "Roboto-bl";
+			font-size: 28px;
+			letter-spacing: 5px;
+			padding: 23px 38px;
+			background-color: #fff;
+		}
+	}
+	&__subtitle{
+		color: #fff;
+	    font-size: 28px;
+	    font-family: "Roboto-b";
+	    letter-spacing: 3px;
+	    margin-bottom: 35px;
+	}
+	&__btn{
+		border: 3px solid $brand;
+		border-radius: 7px;
+		padding: 15px 5px;
+		width: 206px;
+		text-align: center;
+		font-size: 17px;
+		color: #fff;
+		font-family: "Roboto-b";
+		margin-bottom: 22px;
+		&:hover{
+			color: #303030;
+			background-color: $brand;
+		}
+	}
+}
+
+.how-work,
+.benefits{
+	background-color: #eef5f5;
+	background-image: url("/img/bg-work.png");
+	padding: 60px 0 65px 0;
+	&__items{
+		padding: 0px 40px;
+		display: flex;
+		flex: 1 0 auto;
+		justify-content: space-between;
+		text-align: center;
+	}
+	&__item{
+		max-width: 161px;
+		&:not(:last-child){
+			.how-work__item-img{
+				&:before{
+					position: absolute;
+					content: "";
+					left: calc(100% + 8px);
+					top: 50%;
+					margin-top: -1px;
+					width: 127px;
+					border-bottom: 2px dotted #949595;
+				}
+				&:after{
+					content: "";
+					position: absolute;
+					left: calc(100% + 135px);
+					top: 50%;
+					margin-top: -3px;
+					@include sprite($arrow2);
+					z-index: 9;
+				}
+			}
+		}
+	}
+	&__item-img{
+		width: 82px;
+		height: 82px;
+		border-radius: 50%;
+		background-color: $brand;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		margin: 0px auto;
+		margin-bottom: 20px;
+		position: relative;
+
+		&.finger{
+			span{
+				@include sprite($finger);
+			}
+		}
+		&.clock{
+			span{
+				@include sprite($clock);
+			}
+		}
+		&.card{
+			span{
+				@include sprite($credit);
+			}
+		}
+		&.eye{
+			span{
+				@include sprite($eye);
+			}
+		}
+		&.smile{
+			span{
+				@include sprite($smile);
+			}
+		}
+		&.shield{
+			span{
+				@include sprite($shield);
+			}
+		}
+		&.car{
+			span{
+				@include sprite($car);
+			}
+		}
+		&.mans{
+			span{
+				@include sprite($mans);
+			}
+		}
+
+	}
+	&__item-name{
+		font-size: 14px;
+		color: #2f2f2f;
+	}
+}
+
+.catalog{
+	padding: 66px 0px;
+	&__items{
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+	}
+	&__item{
+		width: calc(50% - 15px);
+		text-align: center;
+	}
+	&__item-inner{
+		box-shadow: 0 0 18px rgba(0, 0, 0, 0.13);
+		border-radius: 7px;
+	}
+	&__item-img{
+		max-height: 270px;
+		border-radius: 7px 7px 0 0;
+		overflow: hidden;
+
+		&:hover{
+			img{
+				transform: scale(1.1);
+			}
+		}
+		img{
+			width: 100%;
+			height: auto;
+			transition: all .3s ease-out;
+		}
+	}
+	&__item-info{
+		padding: 23px 28px;
+	}
+	&__item-name{
+		font-size: 20px;
+		color: #303030;
+		font-family: "Roboto-b";
+		position: relative;
+		margin-bottom: 19px;
+		&:after{
+			content:"";
+			position: absolute;
+			left: 50%;
+			margin-left: -10px;
+			height: 3px;
+			width: 20px;
+			background-color: #303030;
+			top: calc(100% + 6px);
+		}
+	}
+	&__item-text{
+		p{
+			margin-bottom: 15px;
+		}
+	}
+	&__item-link{
+		box-shadow: 0 0 18px rgba(0, 0, 0, 0.13);
+		border: 3px solid #fff;
+		border-radius: 7px;
+		background-color: #fff;
+		margin-top: 10px;
+		padding: 16px 23px;
+		font-size: 15px;
+		color: #4f4f4f;
+		font-family: "Roboto-b";
+		display: inline-flex;
+		&:hover{
+			color: #4f4f4f;
+			background-color: $brand;
+			border-color: $brand;
+		}
+		i{
+			@include sprite($arrow3);
+			margin-left: 13px;
+		}
+	}
+}
+
+.about-us{
+	padding: 66px 0px;
+	&__items{
+		display: flex;
+		justify-content: space-between;
+		flex-wrap: wrap;
+	}
+	&__item{
+		width: calc(33.333% - 4px);
+		border: 3px solid white;
+		padding: 17px 23px;
+		border-radius: 7px;
+		box-shadow: 0 1px 7px rgba(0, 0, 0, 0.19);
+		margin-bottom: 8px;
+	}
+	&__item-author{
+		color: #303030;
+		font-size: 18px;
+		font-family: "Roboto-b";
+	}
+	&__item-city{
+		color: #56636a;
+		font-size: 15px;
+		margin-bottom: 15px;
+	}
+	&__item-text{
+		font-size: 15px;
+		color: #55585a;
+		margin-bottom: 15px;
+	}
+	&__item-info{
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+	&__item-date{
+		color: #868787;
+		font-size: 13px;
+	}
+	&__item-show{
+		background-color: $brand;
+		border: 3px solid $brand;
+		border-radius: 7px;
+		box-shadow: 0 1px 16px rgba(11, 13, 13, 0.22);
+		padding: 11px 23px;
+		color: #303030;
+		font-size: 15px;
+		&:hover{
+			background-color: $brand - 20;
+			color: #303030;
+			border-color: $brand - 20;
+		}
+	}
+}
+
+.custom-section{
+	min-height: 468px;
+	background-color: transparent;
+	padding: 66px 0px;
+	&__container{
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+	&__text{
+		border: 3px solid #ffd740;
+		border-radius: 7px;
+		padding: 37px 31px;
+		font-size: 15px;
+		color: #fff;
+		text-align: center;
+		margin-bottom: 37px;
+	}
+	&__btn{
+		border: 3px solid white;
+		border-radius: 7px;
+		box-shadow: 0 0 6px rgba(0, 0, 0, 0.81);
+		background-color: #fff;
+		padding: 19px 33px;
+		color: rgba(48, 48, 48, 0.92);
+		font-size: 17px;
+		font-family: "Roboto-b";
+		&:hover{
+			background-color: $brand - 20;
+			color: rgba(48, 48, 48, 0.92);
+			border-color: $brand - 20;
+		}
+	}
+}
+
+.footer{
+	&__copy{
+		text-align: center;
+		padding: 35px 0px;
+		background-color: #eef5f5;
+		background-image: url("/img/bg-work.png");
+		color: #303030;
+		a{
+			color: #303030;
+			text-decoration: underline;
+			&:hover{
+				text-decoration: none;
+			}
+		}
+	}
+}
