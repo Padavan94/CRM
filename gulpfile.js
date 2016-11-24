@@ -12,12 +12,10 @@ var gulp = require('gulp'),
     pngquant = require('imagemin-pngquant'),
     rimraf = require('rimraf'),
     browserSync = require("browser-sync"),
-    svgmin = require('gulp-svgmin'),
-    cheerio = require('gulp-cheerio'),
+
     gulpif = require('gulp-if'),
     replace = require('gulp-replace'),
     plumber = require('gulp-plumber'),
-    /*uncss = require("gulp-uncss"),*/
     reload = browserSync.reload;
 var spritesmith = require('gulp.spritesmith');
 
