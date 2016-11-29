@@ -1,0 +1,382 @@
+//= template/head.html
+<section class="layout">
+	<div class="title">
+		<h2>Макет:</h2>
+	</div>
+	<div class="container layout__container">
+		<!-- выводи в таком виде мне ID блока, + ID карусели, я исходя из этого обьекта их инициализирую, делай в общем так как в data-arr сделал я
+		{
+			"tab": "gallery1",
+			"carousel": "owl1"
+		},
+		{
+			"tab": "gallery2",
+			"carousel": "owl2"
+		},
+		Короче обычный JSON
+		
+		 -->
+		 <div class="layout__info" data-arr='{"tab": "gallery1","carousel": "owl1"},{"tab": "gallery2","carousel": "owl2"},{"tab": "gallery3","carousel": "owl3"},{"tab": "gallery4","carousel": "owl4"}' >
+	 		<ul class="layout__tabs" role="tablist">
+			    <li role="presentation" class="active">
+			    	<a href="#gallery1" aria-controls="gallery1" role="tab" data-toggle="tab">
+			    		<img src="/img/gal1.png" alt="gal">
+			    		<span>20х30</span>
+			    	</a>
+			    </li>
+			    <li role="presentation">
+			    	<a href="#gallery2" aria-controls="gallery2" role="tab" data-toggle="tab">
+			    		<img src="/img/gal2.png" alt="gal">
+			    		<span>21х25</span>
+			    	</a>
+			    </li>
+			    <li role="presentation">
+			    	<a href="#gallery3" aria-controls="gallery3" role="tab" data-toggle="tab">
+			    		<img src="/img/gal3.png" alt="gal">
+			    		<span>20х60</span>
+			    	</a>
+			    </li>
+			    <li role="presentation">
+			    	<a href="#gallery4" aria-controls="gallery4" role="tab" data-toggle="tab">
+			    		<img src="/img/gal4.png" alt="gal">
+			    		<span>30х20</span>
+			    	</a>
+			    </li>
+		 	</ul>
+		 	<div class="tab-content layout__content">
+		 		<div role="tabpanel" class="gallery tab-pane active" id="gallery1">
+		 			<div class="gallery__info">
+		 				<div class="gallery__img" style="background-image: url('/img/gallery.jpg');">
+		 					
+		 				</div>
+		 				<div class="gallery__descr">
+		 					<h4>Гранж 20x30</h4>
+		 					<p>Душа моя озарена неземной радостью, как эти чудесные весенние утра, которыми я наслаждаюсь от всего сердца.
+							Я совсем один и блаженствую в здешнем краю, словно созданном для таких, как я. Я так счастлив, мой друг, так упоен
+							ощущением покоя, что искусство мое страдает от этого.</p>
+		 				</div>
+		 			</div>
+		 			<div class="owl-carousel gallery__carousel" id="owl1">
+		 				<div class="item gallery__item">
+		 					<a href="#"><img src="/img/item1.jpg" alt="item"></a>
+		 				</div>
+		 				<div class="item gallery__item">
+		 					<a href="#"><img src="/img/item1.jpg" alt="item"></a>
+		 				</div>
+		 				<div class="item gallery__item">
+		 					<a href="#"><img src="/img/item2.jpg" alt="item"></a>
+		 				</div>
+		 				<div class="item gallery__item">
+		 					<a href="#"><img src="/img/item1.jpg" alt="item"></a>
+		 				</div>
+		 				<div class="item gallery__item">
+		 					<a href="#"><img src="/img/item2.jpg" alt="item"></a>
+		 				</div>
+		 				<div class="item gallery__item">
+		 					<a href="#"><img src="/img/item1.jpg" alt="item"></a>
+		 				</div>
+		 				<div class="item gallery__item">
+		 					<a href="#"><img src="/img/item2.jpg" alt="item"></a>
+		 				</div>
+		 				<div class="item gallery__item">
+		 					<a href="#"><img src="/img/item1.jpg" alt="item"></a>
+		 				</div>
+		 				<div class="item gallery__item">
+		 					<a href="#"><img src="/img/item2.jpg" alt="item"></a>
+		 				</div>
+		 				<div class="item gallery__item">
+		 					<a href="#"><img src="/img/item1.jpg" alt="item"></a>
+		 				</div>
+		 				<div class="item gallery__item">
+		 					<a href="#"><img src="/img/item1.jpg" alt="item"></a>
+		 				</div>
+		 				<div class="item gallery__item">
+		 					<a href="#"><img src="/img/item1.jpg" alt="item"></a>
+		 				</div>
+		 				<div class="item gallery__item">
+		 					<a href="#"><img src="/img/item2.jpg" alt="item"></a>
+		 				</div>
+		 				<div class="item gallery__item">
+		 					<a href="#"><img src="/img/item1.jpg" alt="item"></a>
+		 				</div>
+
+		 			</div>
+		 		</div>
+			 	<div role="tabpanel" class="tab-pane gallery" id="gallery2">
+			 		<div class="gallery__info">
+			 			<div class="gallery__img" style="background-image: url('/img/gallery.jpg');">
+			 			</div>
+			 			<div class="gallery__descr">
+			 				<h4>Гранж 21х25</h4>
+			 				<p>Душа моя озарена неземной радостью, как эти чудесные весенние утра, которыми я наслаждаюсь от всего сердца.
+							Я совсем один и блаженствую в здешнем краю, словно созданном для таких, как я. Я так счастлив, мой друг, так упоен
+							ощущением покоя, что искусство мое страдает от этого.</p>
+			 			</div>
+			 		</div>
+			 		<div class="owl-carousel gallery__carousel" id="owl2">
+		 				<div class="item gallery__item">
+		 					<a href="#"><img src="/img/item1.jpg" alt="item"></a>
+		 				</div>
+		 				<div class="item gallery__item">
+		 					<a href="#"><img src="/img/item1.jpg" alt="item"></a>
+		 				</div>
+		 				<div class="item gallery__item">
+		 					<a href="#"><img src="/img/item2.jpg" alt="item"></a>
+		 				</div>
+		 				<div class="item gallery__item">
+		 					<a href="#"><img src="/img/item1.jpg" alt="item"></a>
+		 				</div>
+		 				<div class="item gallery__item">
+		 					<a href="#"><img src="/img/item2.jpg" alt="item"></a>
+		 				</div>
+		 				<div class="item gallery__item">
+		 					<a href="#"><img src="/img/item1.jpg" alt="item"></a>
+		 				</div>
+		 				<div class="item gallery__item">
+		 					<a href="#"><img src="/img/item2.jpg" alt="item"></a>
+		 				</div>
+		 				<div class="item gallery__item">
+		 					<a href="#"><img src="/img/item1.jpg" alt="item"></a>
+		 				</div>
+		 				<div class="item gallery__item">
+		 					<a href="#"><img src="/img/item2.jpg" alt="item"></a>
+		 				</div>
+		 				<div class="item gallery__item">
+		 					<a href="#"><img src="/img/item1.jpg" alt="item"></a>
+		 				</div>
+		 				<div class="item gallery__item">
+		 					<a href="#"><img src="/img/item1.jpg" alt="item"></a>
+		 				</div>
+		 				<div class="item gallery__item">
+		 					<a href="#"><img src="/img/item1.jpg" alt="item"></a>
+		 				</div>
+		 				<div class="item gallery__item">
+		 					<a href="#"><img src="/img/item2.jpg" alt="item"></a>
+		 				</div>
+		 				<div class="item gallery__item">
+		 					<a href="#"><img src="/img/item1.jpg" alt="item"></a>
+		 				</div>
+
+		 			</div>
+			 	</div>
+			 	<div role="tabpanel" class="tab-pane gallery" id="gallery3">
+			 		<div class="gallery__info">
+			 			<div class="gallery__img" style="background-image: url('/img/gallery.jpg');">
+		 					
+		 				</div>
+			 			<div class="gallery__descr">
+			 				<h4>Гранж 20x60</h4>
+			 				<p>Душа моя озарена неземной радостью, как эти чудесные весенние утра, которыми я наслаждаюсь от всего сердца.
+							Я совсем один и блаженствую в здешнем краю, словно созданном для таких, как я. Я так счастлив, мой друг, так упоен
+							ощущением покоя, что искусство мое страдает от этого.</p>
+			 			</div>
+			 		</div>
+			 		<div class="gallery__carousel" id="owl3">
+			 			<div class="item gallery__item">
+		 					<a href="#"><img src="/img/item2.jpg" alt="item"></a>
+		 				</div>
+		 				<div class="item gallery__item">
+		 					<a href="#"><img src="/img/item1.jpg" alt="item"></a>
+		 				</div>
+		 				<div class="item gallery__item">
+		 					<a href="#"><img src="/img/item2.jpg" alt="item"></a>
+		 				</div>
+		 				<div class="item gallery__item">
+		 					<a href="#"><img src="/img/item1.jpg" alt="item"></a>
+		 				</div>
+		 				<div class="item gallery__item">
+		 					<a href="#"><img src="/img/item1.jpg" alt="item"></a>
+		 				</div>
+		 				<div class="item gallery__item">
+		 					<a href="#"><img src="/img/item1.jpg" alt="item"></a>
+		 				</div>
+		 				<div class="item gallery__item">
+		 					<a href="#"><img src="/img/item2.jpg" alt="item"></a>
+		 				</div>
+		 				<div class="item gallery__item">
+		 					<a href="#"><img src="/img/item1.jpg" alt="item"></a>
+		 				</div>
+			 		</div>
+			 	</div>
+			 	<div role="tabpanel" class="tab-pane gallery" id="gallery4">
+			 		<div class="gallery__info">
+			 			<div class="gallery__img" style="background-image: url('/img/gallery.jpg');">
+		 					
+		 				</div>
+			 			<div class="gallery__descr">
+			 				<h4>Гранж 30x20</h4>
+			 				<p>Душа моя озарена неземной радостью, как эти чудесные весенние утра, которыми я наслаждаюсь от всего сердца.
+							Я совсем один и блаженствую в здешнем краю, словно созданном для таких, как я. Я так счастлив, мой друг, так упоен
+							ощущением покоя, что искусство мое страдает от этого.</p>
+			 			</div>
+			 		</div>
+			 		<div class="gallery__carousel" id="owl4">
+			 			<div class="item gallery__item">
+		 					<a href="#"><img src="/img/item2.jpg" alt="item"></a>
+		 				</div>
+		 				<div class="item gallery__item">
+		 					<a href="#"><img src="/img/item1.jpg" alt="item"></a>
+		 				</div>
+		 				<div class="item gallery__item">
+		 					<a href="#"><img src="/img/item2.jpg" alt="item"></a>
+		 				</div>
+		 				
+			 		</div>
+			 	</div>
+		 	</div>
+		</div>
+		<form class="task-status">
+			<div class="task-status__isready">
+				<div class="check check--light">
+					<input type="checkbox" id="cb1">
+					<label for="cb1">Готовые макеты</label>
+				</div>
+			</div>
+			<div class="task-status__num">
+				<p>Кол-во разворотов</p>
+				<div>
+					<div class="counter">
+						<div class="btn-minus"><span></span></div>
+						<div class="btn-plus"><span></span></div>
+						<input type="text" value="1">
+					</div>
+					<div class="check check--light">
+						<input type="checkbox" id="cb2">
+						<label for="cb2">Кол-во разворотов на усмотрение верстальщика</label>
+					</div>
+				</div>
+			</div>
+			<div class="task-status__price">
+				<span>Итого:</span>
+				<span class="price">348 грн.</span>
+			</div>
+			<div class="task-status__send">
+				<button class="flex-link"><span>Оформить заказ</span><i class="ic"></i></button>
+			</div>
+		</form>
+	</div>
+</section>
+<section class="accordion">
+	<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+  <div class="panel panel-default">
+    <div class="panel-heading text-center" role="tab" id="headingOne">
+      <h4 class="panel-title">
+        <a role="button" class="flex-link" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+        	<span class="circle"><i class="ic"></i></span><span>Вход / регистрация</span>
+        </a>
+      </h4>
+    </div>
+    <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+      <div class="panel-body">
+        <div class="reg-login">
+        	<div class="container">
+        		<div class="container reg-login__container">
+        			<div class="reg-login__left">
+        				<form action="" class="reg-login__login">
+        					<h3 class="form-title">ВХОД:</h3>
+        					<div class="input">
+				        		<label>Логин</label>
+				        		<input type="text" placeholder="Введите Ваш логин">
+				        	</div>
+				        	<div class="input">
+				        		<label>Логин</label>
+				        		<input type="password" placeholder="Введите пароль">
+				        	</div>
+				        	<div class="reg-login__bottom">
+				        		<button class="form-btn reg-login__submit">Войти<i class="ic"></i></button>
+				        		<a href="#">Восстановление пароля</a>
+				        	</div>
+				        	
+        				</form>
+        			</div>
+        			<div class="reg-login__right">
+        				<form action="" class="reg-login__registr">
+        					<h3 class="form-title">Регистрация:</h3>
+        					<div class="input">
+				        		<label>Имя</label>
+				        		<input type="text" placeholder="Введите Ваше имя">
+				        	</div>
+				        	<div class="input">
+				        		<label>E-mail</label>
+				        		<input type="mail" placeholder="Введите Ваш e-mail">
+				        	</div>
+				        	<div class="input">
+				        		<label>Телефон</label>
+				        		<input type="text" placeholder="Введите Ваш номер телефона">
+				        	</div>
+				        	<div class="input">
+				        		<label>Город</label>
+				        		<div>
+				        			<select name="" id="">
+					        			<option value="1">Выберите город</option>
+					        		</select>
+					        		<i></i>
+				        		</div>
+				        	</div>
+				        	<div class="input">
+				        		<label>Придумайте пароль</label>
+				        		<input type="password" placeholder="Не менее  4-х символов">
+				        	</div>
+				        	<div class="input">
+				        		<label>Подтвердите пароль</label>
+				        		<input type="password" placeholder="Не менее  4-х символов">
+				        	</div>
+				        	<div class="reg-login__bottom ">
+				        		<div class="reg-login__submit2">
+									<button class="form-btn form-btn--black">Регистрация <i class="ic"></i></button>
+				        		</div>
+				        		
+				        	</div>
+				        	
+        				</form>
+        			</div>
+        			
+        		</div>
+        	</div>
+        	
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="panel panel-default">
+    <div class="panel-heading text-center" role="tab" id="headingTwo">
+      <h4 class="panel-title">
+        <a class="collapsed flex-link" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+        	<span class="circle"><i class="ic"></i></span><span>оформление заказа</span>
+        </a>
+      </h4>
+    </div>
+    <div id="collapseTwo" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingTwo">
+      <div class="panel-body">
+        <div class="order">
+        	<div class="container order__container">
+        		<form action="" class="order__form">
+        			<div class="order__scool">
+        				<div class="input input--light">
+			        		<label>Школа</label>
+			        		<input type="password" placeholder="Название школы">
+			        	</div>
+        			</div>
+        			<div class="order__class">
+        				<div class="input input--light">
+			        		<label>Класс</label>
+			        		<input type="password" placeholder="Класс">
+			        	</div>
+        			</div>
+        			<div class="order__comment">
+        				<div class="input input--light">
+			        		<label>Комментарий</label>
+			        		<textarea name="" id="" placeholder="Введите комментарий"></textarea>
+			        	</div>
+        			</div>
+        		</form>
+        	</div>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+
+//= template/footer.html

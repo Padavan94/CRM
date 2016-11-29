@@ -16,6 +16,9 @@
     "page-scroll-to-id": "^1.5.4",
     "bootstrap": "^3.3.7",
     "bootstrap-sass": "^3.3.7",
-    "owl.carousel": "OwlCarousel2#^2.2.0"
+    "owl.carousel": "OwlCarousel2#^2.2.0",
+    "blueimp-file-upload": "jQuery-File-Upload#^9.14.1",
+    "fine-uploader": "^5.11.8",
+    "dropzone": "^4.3.0"
   }
 }
