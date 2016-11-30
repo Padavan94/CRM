@@ -3,6 +3,9 @@
 */
 
 @import "../../bower_components/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
+@import "../../bower_components/dropzone/dist/dropzone.css";
+
+
 /*
 * Custom
 */
@@ -1170,12 +1173,35 @@ body{
 	}
 }
 
+.skin-add{
+	border-radius: 7px;
+	box-shadow: 0 1px 16px rgba(0, 0, 0, 0.22);
+	background-color: $brand;
+	font-size: 17px;
+	color: #303030;
+	font-family: "Roboto-b";
+	padding: 16px 40px;
+}
+
 .order{
 	padding: 54px 0px;
 	&__form{
+		width: 100%;
 		display: flex;
 		flex-wrap: wrap;
-		margin-bottom: 65px;
+	}
+	&__submit{
+		button{
+			width: 240.6px;
+			height: 66px;
+			i{
+				@include sprite($check3);
+				margin-left: 6px;
+			}
+		}
+	}
+	&__add{
+		width: 100%;
 	}
 	&__scool{
 		width: 333px;
@@ -1186,5 +1212,255 @@ body{
 	}
 	&__comment{
 		width: 100%;
+		margin-bottom: 65px;
+	}
+	&__group{
+		margin-bottom: 35px;
+		h4{
+			font-family: "Roboto-b";
+			font-size: 17px;
+			color: #303030;
+			line-height: 20px;
+		}
+	}
+	&__add-btn{
+		display: inline-flex;
+		align-items: center;
+
+		i{
+			@include sprite($add);
+			margin-left: 7px;
+		}
+		&:hover{
+			background-color: $brand - 20;
+			color: #303030;
+		}
+	}
+	&__previews{
+		display: flex;
+		flex-wrap: wrap;
+		list-style-type: none;
+		padding-left: 0;
+		margin-bottom: 0px;
+		margin-top: 24px;
+	}
+	&__prev{
+		margin-right: 25px;
+		margin-bottom: 14px;
+	}
+	&__prev-img{
+		width: 145px;
+		height: 144px;
+		background-position: center top;
+		background-size: cover;
+		border-radius: 2px;
+		overflow: hidden;
+		box-shadow: 0 1px 3px rgba(0, 0, 0, 0.27);
+		margin-bottom: 8px;
+		position: relative;
+	}
+	&__prev-name,
+	&__prev-size{
+		font-size: 12px;
+		color: #768282;
+	}
+	&__prev-close{
+		position: absolute;
+		top: 6px;
+		right: 6px;
+		@include sprite($delete);
+		transition: none;
+		&:hover{
+			@include sprite($delete-h);
+		}
+	}
+	&__prev-title{
+		font-size: 15px;
+		color: #535353;
+		font-family: "Roboto-b";
+		margin-bottom: 1px;
+	}
+}
+
+.upload{
+	position: relative;
+	input{
+		position: absolute;
+		left: 0;
+		top: 0;
+		pointer-events: none;
+		opacity: 0;
+	}
+	label{
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 145px;
+		height: 41px;
+		background-color: $brand;
+		border-radius: 7px;
+		box-shadow: 0 1px 16px rgba(11, 13, 13, 0.22);
+		color: #303030;
+		font-size: 15px;
+		font-family: "Roboto-b";
+		cursor: pointer;
+		transition: all .2s ease-in;
+		i{
+			margin-left: 6px;
+			@include sprite($upload);
+		}
+		&:hover{
+			background-color: $brand - 20;
+		}
+	}
+}
+
+.drope-popup{
+	max-width: 1140px;
+	margin: 0px auto;
+	text-align: center;
+	position: relative;
+	.mfp-close{
+		bottom: calc(100% + -38px);
+		top: auto;
+		font-size: 45px;
+		color: #fff !important;
+		width: auto;
+		height: auto;
+	}
+	&__inner{
+		position: relative;
+	}
+	&__title{
+		font-size: 19px;
+		color: white;
+		font-family: "Roboto-b";
+		text-transform: uppercase;
+		margin-bottom: 8px;
+
+	}
+	&__add{
+		position: absolute;
+		top: 36px;
+		width: 100%;
+		left: 0;
+		a{
+			display: inline-flex;
+			align-items: center;
+
+			i{
+				@include sprite($add);
+				margin-left: 7px;
+			}
+			&:hover,
+			&:active,
+			&:focus{
+				background-color: $brand - 20;
+				color: #303030;
+			}
+		}
+	}
+	.dropzone{
+		background-color: white;
+		border: 3px solid white;
+		border-radius: 7px;
+		box-shadow: 0 1px 16px rgba(11, 13, 13, 0.12);
+		padding: 117px 14px;
+		min-height: 473px;
+		background-image: url("/img/drop.png");
+		background-position: center 118px;
+		background-repeat: no-repeat;
+		text-align: left;
+		&.dz-started{
+			background-image: none;
+			& + .drope-popup__btns{
+				display: flex;
+			}
+		}
+		.dz-details,
+		.dz-progress{
+			display: none;
+		}
+		.dz-image-preview{
+			margin: 0px;
+			padding: 0px 9px;
+			margin-bottom: 18px;
+		}
+		.dz-message{
+			color: #b8c0be;
+			font-size: 17px;
+			position: absolute;
+			bottom: 32px;
+			left: 0;
+			text-align: center;
+			width: 100%;
+			margin-bottom: 0px;
+		}
+		.dz-remove{
+			position: absolute;
+			top: 4px;
+			right: 13px;
+			@include sprite($delete2);
+			font-size: 0;
+			z-index: 999;
+			transition: none;
+			&:hover{
+				@include sprite($delete2-h);
+			}
+		}
+		.dz-details{
+			display: none;
+		}
+	}
+	&__btns{
+		display: flex;
+		bottom: 36px;
+		left: 0;
+		width: 100%;
+		position: absolute;
+		justify-content: center;
+		display: none;
+		.upl{
+			width: 244px;
+			height: 57px;
+			background-color: #303030;
+			border-radius: 7px;
+			box-shadow: 0 1px 16px rgba(0, 0, 0, 0.22);
+			display: flex;
+			justify-content: center;
+			margin: 0px 6px;
+			align-items: center;
+			font-size: 17px;
+			font-family: "Roboto-b";
+			color: $brand;
+			&:hover{
+				background-color: #303030 - 20;
+			}
+			i{
+				margin-left: 8px;
+				@include sprite($upload2);
+			}
+		}
+		.ready{
+			width: 199px;
+			height: 57px;
+			background-color: #689f38;
+			border-radius: 7px;
+			box-shadow: 0 1px 16px rgba(11, 13, 13, 0.29);
+			display: flex;
+			justify-content: center;
+			margin: 0px 6px;
+			align-items: center;
+			font-size: 17px;
+			font-family: "Roboto-b";
+			color: #fff;
+			&:hover{
+				background-color: #689f38 - 20;
+			}
+			i{
+				margin-left: 8px;
+				@include sprite($check4);
+			}
+		}
 	}
 }

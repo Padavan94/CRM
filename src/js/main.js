@@ -1,14 +1,65 @@
 
 //= ../../bower_components/bootstrap-sass/assets/javascripts/bootstrap.js
-
+//= ../../bower_components/dropzone/dist/dropzone.js
 
 //= partials/parallax.js
 //= partials/owl.carousel.js
+//= partials/jquery.magnific-popup.min.js
 
-//init owl carousel
+
+Dropzone.options.myAwesomeDropzone = { // The camelized version of the ID of the form element
+
+  // The configuration we've talked about above
+  autoProcessQueue: false,
+  uploadMultiple: true,
+  addRemoveLinks: true,
+  parallelUploads: 100,
+  uploadprogress: true,
+  dictDefaultMessage: "Или перетащите файлы сюда",
+  clickable: '.drope-popup__add-btn',
+  // The setting up of the dropzone
+  init: function() {
+
+/*    // First change the button to actually tell Dropzone to process the queue.
+    this.element.querySelector("button[type=submit]").addEventListener("click", function(e) {
+      // Make sure that the form isn't actually being sent.
+      e.preventDefault();
+      e.stopPropagation();
+      myDropzone.processQueue();
+    });*/
+
+
+    this.on("queuecomplete", function(file) { alert("Added file."); });
+    // Listen to the sendingmultiple event. In this case, it's the sendingmultiple event instead
+    // of the sending event because uploadMultiple is set to true.
+    this.on("sendingmultiple", function() {
+      // Gets triggered when the form is actually being sent.
+      // Hide the success button or the complete form.
+    });
+    this.on("successmultiple", function(files, response) {
+      // Gets triggered when the files have successfully been sent.
+      // Redirect user or notify of success.
+    });
+    this.on("errormultiple", function(files, response) {
+      // Gets triggered when there was an error sending the files.
+      // Maybe show form again, and notify user of error
+    });
+  }
+
+}
+
+
+
 
 
 $(document).ready(function($) {
+
+	//add photos
+
+	$('.order__add-btn').magnificPopup({
+	  type:'inline',
+	  midClick: true // Allow opening popup on middle mouse click. Always set it to true if you don't provide alternative source in href.
+	});
 	
 
 	//paralax section
@@ -18,7 +69,7 @@ $(document).ready(function($) {
 
     //resize paralax when content so large
     $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
-	  jQuery(window).trigger('resize').trigger('scroll');
+	  $(window).trigger('resize').trigger('scroll');
 	})
 
 
@@ -45,6 +96,9 @@ $(document).ready(function($) {
 		var val = $(this).parent().find("input").val();
 		$(this).parent().find("input").val(+val + 1);
 	});
+
+
+	//
 
 });
 
