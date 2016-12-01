@@ -1,0 +1,121 @@
+//= template/head.html
+<section class="layout">
+	<div class="title">
+		<h2>Задача</h2>
+	</div>
+	<div class="container layout__container">
+		<!-- выводи в таком виде мне ID блока, + ID карусели, я исходя из этого обьекта их инициализирую, делай в общем так как в data-arr сделал я
+		{
+			"tab": "gallery1",
+			"carousel": "owl1"
+		},
+		{
+			"tab": "gallery2",
+			"carousel": "owl2"
+		},
+		Короче обычный JSON
+		
+		 -->
+		 <div class="layout__info">
+	 		
+		 	<div class="tab-content layout__content">
+		 		<div role="tabpanel" class="gallery tab-pane active">
+		 			<div class="gallery__info">
+		 				<div class="gallery__img" style="background-image: url('/img/gallery.jpg');">
+		 					
+		 				</div>
+		 				<div class="gallery__descr">
+		 					<h4>Гранж 20x30</h4>
+		 					<p>Душа моя озарена неземной радостью, как эти чудесные весенние утра, которыми я наслаждаюсь от всего сердца.
+							Я совсем один и блаженствую в здешнем краю, словно созданном для таких, как я. Я так счастлив, мой друг, так упоен
+							ощущением покоя, что искусство мое страдает от этого.</p>
+		 				</div>
+		 			</div>
+		 		</div>
+		 		<div class="gallery__user-info">
+		 			<div class="gallery-info-box gallery__dis">
+		 				<div class="position"><i class="ic"></i>верстальщик::</div>
+		 				<div class="name">Пётр Петров</div>
+		 			</div>
+		 		</div>
+		 		<div class="gallery__user-info">
+		 			<div class="gallery-info-box gallery__dis">
+		 				<div class="position"><i class="ic"></i>верстальщик::</div>
+		 				<div class="name">Пётр Петров</div>
+		 			</div>
+		 		</div>
+			 	
+		 	</div>
+		</div>
+		<form class="task-status task-status--zakaz">
+			<div class="task-status__tape">
+				<div class="task-status__num">
+					<p>Кол-во разворотов <span>(16)</span></p>
+				</div>
+				<div class="task-status__ready">
+					<span>Статус:</span>
+					<strong class="green">В вёрстке</strong>
+				</div>
+				<div class="task-status__ready">
+					<span>Последние изменения:</span>
+					<strong>12.01.2017</strong>
+				</div>
+				<div class="task-status__price">
+					<span>Итого:</span>
+					<span class="price">348 грн.</span>
+				</div>
+			</div>
+		</form>
+		
+	</div>
+</section>
+<div class="comment-section">
+	<div class="container comment-section__container">
+		<form class="comment-section__inner">
+			<div class="input">
+				<label><strong>Оставить комментарий:</strong></label>
+				<textarea name="" id="" placeholder="Введите комментарий"></textarea>
+			</div>
+			<div class="input text-right">
+				<button class="form-btn comment-section__send">Отправить<i class="ic"></i></button>
+			</div>
+			
+		</form>
+		
+	</div>
+	
+</div>
+<section class="work-history">
+	<div class="title">
+		<h2>История работы</h2>
+	</div>
+	<div class="container work-history__container">
+		<div class="work-history__items">
+			<div class="work-history__item">
+				<div class="work-history__item-box">
+					<div class="work-history__item-title">
+						<i class="main-icon"><i></i></i>
+						<span class="name">Иван Иванов</span>19.08.2016 Изменил статус на <strong class="green">“В Вёрстке”</strong>
+					</div>
+					<div class="work-history__item-text">
+						Душа моя озарена неземной радостью, как эти чудесные весенние утра, которыми я наслаждаюсь от всего сердца. Я совсем один и блаженствую.
+					</div>
+				</div>
+			</div>
+			<div class="work-history__item">
+				<div class="work-history__item-box">
+					<div class="work-history__item-title">
+						<i class="main-icon"><i></i></i>
+						<span class="name">Иван Иванов</span>19.08.2016 Изменил статус на <strong class="green">“В Вёрстке”</strong>
+					</div>
+					<div class="work-history__item-text">
+						Душа моя озарена неземной радостью, как эти чудесные весенние утра, которыми я наслаждаюсь от всего сердца. Я совсем один и блаженствую.
+					</div>
+				</div>
+				
+			</div>
+		</div>
+	</div>
+</section>
+
+//= template/footer.html

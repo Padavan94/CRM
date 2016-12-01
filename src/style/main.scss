@@ -26,6 +26,13 @@ body{
 	letter-spacing: .7px;
 }
 
+.mt20{
+	margin-top: 20px;
+}
+.green{
+	color: #689f38 !important;
+}
+
 .btn-skin{
 	color: 19px;
 	font-family: "Roboto-m";
@@ -132,7 +139,12 @@ body{
 		}
 	}
 }
-
+.subtitle{
+	color: #303030;
+	font-size: 14px;
+	text-align: center;
+	margin-top: 16px;
+}
 .nav-menu{
 	box-shadow: 0 0 9px rgba(0, 0, 0, 0.2);
 	background-color: #fff;
@@ -380,6 +392,7 @@ body{
 		display: flex;
 		flex-wrap: wrap;
 		justify-content: space-between;
+		flex: 1 1 0%;
 	}
 	&__item{
 		width: calc(50% - 15px);
@@ -800,10 +813,46 @@ body{
 	}
 }
 
+.gallery-info-box{
+	display: flex;
+	margin-right: 47px;
+	.position{
+		text-transform: uppercase;
+		font-size: 14px;
+		color: #656565;
+		margin-right: 13px;
+		
+	}
+	.name{
+		color: #424242;
+		font-size: 14px;
+		
+	}
+
+}
 .gallery{
 	&__info{
 		display: flex;
 		flex: 1 1 0%;
+	}
+	&__dis{
+		i{
+			@include sprite($front);
+			margin-right: 3px;
+		}
+	}
+	&__client{
+		i{
+			@include sprite($client);
+			margin-right: 3px;
+		}
+	}
+	&__user-info{
+		display: flex;
+		align-items: center;
+		border-top: 1px solid #d7dddd;
+		padding-top: 15px;
+		margin-top: 20px;
 	}
 	&__img{
 		width: 155px;
@@ -889,7 +938,50 @@ body{
 	}
 }
 
+
 .task-status{
+	flex: 1 1 0%;
+	&--zakaz{
+		.task-status__tape{
+			& > *{
+				padding-top: 0px;
+			}
+			p{
+				margin-bottom: 0px;
+				span{
+					color: #2f2f2f;
+					font-family: "Roboto-b";
+				}
+			}
+		}
+	}
+	&__ready{
+		padding-top: 12px;
+		span{
+			color: #767676;
+			font-size: 14px;
+		}
+		strong{
+			color: #303030;
+			font-size: 14px;
+		}
+	}
+	&__tape{
+		padding-top: 12px;
+		display: flex;
+		flex: 1 1 0%;
+		justify-content: space-between;
+		align-items: center;
+		padding-bottom: 5px;
+		border-bottom: 1px solid #c4caca;
+		margin-bottom: 20px;
+		.task-status__num{
+			margin-bottom: 0px;
+		}
+		.task-status__price{
+			margin-bottom: 0px;
+		}
+	}
 	&__isready{
 		margin-bottom: 22px;
 	}
@@ -1112,7 +1204,7 @@ body{
 }
 
 
-.form-btn{
+.form-btn{ 
 	border-radius: 7px;
 	box-shadow: 0 1px 16px rgba(0, 0, 0, 0.22);
 	background-color: $brand;
@@ -1183,8 +1275,37 @@ body{
 	padding: 16px 40px;
 }
 
+.btn-white{
+	box-shadow: 0 5px 13px rgba(11, 13, 13, 0.15);
+	border-radius: 7px;
+	background-color: white;
+	height: 69px;
+	width: 199px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 19px;
+	color: #424242;
+	font-weight: "Roboto-m";
+	border: none;
+	i{
+		@include sprite($check5);
+		margin-left: 6px;
+	}
+	&:hover{
+		background-color: $brand;
+	}
+}
+
 .order{
 	padding: 54px 0px;
+	&__btn-group{
+		display: flex;
+		justify-content: flex-end;
+		.task-status__send{
+			margin-right: 15px;
+		}
+	}
 	&__form{
 		width: 100%;
 		display: flex;
@@ -1197,6 +1318,14 @@ body{
 			i{
 				@include sprite($check3);
 				margin-left: 6px;
+			}
+		}
+		&--arr{
+			button{
+				i{
+					@include sprite($arrow5);
+					margin-left: 6px;
+				}
 			}
 		}
 	}
@@ -1462,5 +1591,149 @@ body{
 				@include sprite($check4);
 			}
 		}
+	}
+}
+
+.work-history{
+	padding: 66px 0px;
+	&__container{
+		
+	}
+	&__items{
+		width: 100%;
+	}
+	
+	&__item-box{
+		flex: 1 1 0%;
+		background-color: #e6eded;
+		padding: 25px 25px 25px 80px;
+	}
+	&__item-btns{
+		margin-left: 6px;
+		width: 132px;
+		a{
+			width: 100%;
+			display: inline-block;
+			margin-bottom: 5px;
+			border-radius: 7px;
+			box-shadow: 0 5px 13px rgba(11, 13, 13, 0.15);
+			font-size: 13px;
+			color: #424242;
+			font-family: "Roboto-m";
+			background-color: $brand;
+			text-align: center;
+			padding: 10px 3px;
+			&:hover{
+				background-color: $brand - 20;
+			}
+			i{
+				display: none;
+			}
+		}
+	}
+	&__item-text{
+		font-size: 14px;
+	}
+	&__item-title{
+		font-weight: lighter;
+		margin-bottom: 16px;
+		position: relative;
+		.main-icon{
+			width: 41px;
+			height: 41px;
+			border-radius: 50%;
+			background-color: #fff;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			position: absolute;
+			right: calc(100% + 9px);
+			top: -8px;
+			box-shadow: 0 2px 4px rgba(88, 88, 88, 0.2);
+			i{
+				@include sprite($man2);
+			}
+		}
+		.name{
+			color: #424242;
+			font-size: 15px;
+			font-family: "Roboto-b";
+			margin-right: 10px;
+		}
+	}
+	&__item{
+		display: flex;
+		margin-bottom: 24px;
+		display: flex;
+
+
+		&:first-child{
+			flex-direction: column-reverse;
+			align-items: center;
+			margin-bottom: 44px;
+			.main-icon{
+				background-color: #e6eded;
+				i{
+					@include sprite($man);
+				}
+			}
+			.work-history__item-box{
+				background-color: #ffffff;
+				box-shadow: 0 1px 21px rgba(11, 13, 13, 0.19);
+				border-radius: 2px;
+			}
+			.work-history__item-btns{
+				width: 100%;
+				margin-bottom: 10px;
+				display: flex;
+				flex: 1 1 0%;
+				justify-content: center;
+				a{
+					width: 242px;
+					font-size: 17px;
+					color: #303030;
+					font-family: "Roboto-b";
+					padding-top: 14px;
+					padding-bottom: 14px;
+					margin: 0px 6px;
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					i{
+						display: inline-block;
+					}
+				}
+				.next{
+					i{
+						@include sprite($check2);
+						margin-left: 6px;
+					}
+				}
+				.edit{
+					i{
+						@include sprite($registration-icon);
+						margin-left: 6px;
+					}
+				}
+				.remove{
+					i{
+						@include sprite($delete2);
+						margin-left: 6px;
+					}
+				}
+			}
+		}
+	}
+}
+
+.comment-section{
+	background-color: #dee8e7;
+	padding: 66px 0px;
+	&__inner{
+		flex: 1 1 0%;
+	}
+	&__send{
+		@extend .reg-login__submit;
+		margin-right: 0;
 	}
 }

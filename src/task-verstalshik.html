@@ -1,0 +1,228 @@
+//= template/head.html
+<section class="layout">
+	<div class="title">
+		<h2>СШ №22:</h2>
+		<div class="subtitle">Класс: (а)</div>
+	</div>
+	<div class="container layout__container">
+		<!-- выводи в таком виде мне ID блока, + ID карусели, я исходя из этого обьекта их инициализирую, делай в общем так как в data-arr сделал я
+		{
+			"tab": "gallery1",
+			"carousel": "owl1"
+		},
+		{
+			"tab": "gallery2",
+			"carousel": "owl2"
+		},
+		Короче обычный JSON
+		
+		 -->
+		 <div class="layout__info">
+	 		
+		 	<div class="tab-content layout__content">
+		 		<div role="tabpanel" class="gallery tab-pane active">
+		 			<div class="gallery__info">
+		 				<div class="gallery__img" style="background-image: url('/img/gallery.jpg');">
+		 					
+		 				</div>
+		 				<div class="gallery__descr">
+		 					<h4>Гранж 20x30</h4>
+		 					<p>Душа моя озарена неземной радостью, как эти чудесные весенние утра, которыми я наслаждаюсь от всего сердца.
+							Я совсем один и блаженствую в здешнем краю, словно созданном для таких, как я. Я так счастлив, мой друг, так упоен
+							ощущением покоя, что искусство мое страдает от этого.</p>
+		 				</div>
+		 			</div>
+		 		</div>
+		 		<div class="gallery__user-info">
+		 			<div class="gallery-info-box gallery__client">
+		 				<div class="position"><i class="ic"></i>Заказчик:</div>
+		 				<div class="name">Иван Иванов</div>
+		 			</div>
+		 			<div class="gallery-info-box gallery__dis">
+		 				<div class="position"><i class="ic"></i>верстальщик::</div>
+		 				<div class="name">Пётр Петров</div>
+		 			</div>
+		 		</div>
+			 	
+		 	</div>
+		</div>
+		<form class="task-status">
+			<div class="task-status__tape">
+				<div class="task-status__num">
+					<p>Кол-во разворотов</p>
+					<div>
+						<div class="counter">
+							<div class="btn-minus"><span></span></div>
+							<div class="btn-plus"><span></span></div>
+							<input type="text" value="1">
+						</div>
+					</div>
+				</div>
+				<div class="task-status__ready">
+					<span>Статус:</span>
+					<strong>В вёрстке</strong>
+				</div>
+				<div class="task-status__ready">
+					<span>Последние изменения:</span>
+					<strong>12.01.2017</strong>
+				</div>
+				<div class="task-status__price">
+					<span>Итого:</span>
+					<span class="price">348 грн.</span>
+				</div>
+			</div>
+		</form>
+		<div class="order__add">
+	    	<div class="order__group">
+	    		<h4>ДЕТИ:</h4>
+	    		<a href=".drope-popup" class="skin-add order__add-btn">Добавить фото <i class="ic"></i></a>
+
+	    		<ul class="order__previews">
+	    			<li class="order__prev">
+	    				<div class="order__prev-title">Обложка</div>
+	    				<div class="order__prev-img" style="background-image: url('/img/order1.jpg');">
+							<a href="#" class="order__prev-close"><i class="ic"></i></a>
+	    				</div>
+	    				<div class="order__prev-upload">
+	    					<div class="upload">
+	    						<input type="file" id="file1">
+	    						<label for="file1">Загрузить <i class="ic"></i></label>
+	    					</div>
+	    				</div>
+	    			</li>
+	    			<li class="order__prev">
+	    				<div class="order__prev-title">Разворот 1</div>
+	    				<div class="order__prev-img" style="background-image: url('/img/order1.jpg');">
+							<a href="#" class="order__prev-close"><i class="ic"></i></a>
+	    				</div>
+	    				<div class="order__prev-upload">
+	    					<div class="upload">
+	    						<input type="file" id="file2">
+	    						<label for="file2">Загрузить <i class="ic"></i></label>
+	    					</div>
+	    				</div>
+	    			</li>
+	    			<li class="order__prev">
+	    				<div class="order__prev-title">Разворот 2</div>
+	    				<div class="order__prev-img" style="background-image: url('/img/order1.jpg');">
+							<a href="#" class="order__prev-close"><i class="ic"></i></a>
+	    				</div>
+	    				<div class="order__prev-upload">
+	    					<div class="upload">
+	    						<input type="file" id="file3">
+	    						<label for="file3">Загрузить <i class="ic"></i></label>
+	    					</div>
+	    				</div>
+	    			</li>
+	    		</ul>
+	    	</div>
+	    	<div class="order__group">
+	    		<h4>УЧИТЕЛЯ:</h4>
+	    		<a href="#" class="skin-add order__add-btn">Добавить фото <i class="ic"></i></a>
+	    	</div>
+	    	<div class="order__group">
+	    		<h4>КОЛЛАЖИ:</h4>
+	    		<a href="#" class="skin-add order__add-btn">Добавить фото <i class="ic"></i></a>
+	    	</div>
+	    	<div class="order__btn-group">
+	    		<div class="task-status__send">
+					<button class="flex-link"><span>Оформить заказ</span><i class="ic"></i></button>
+				</div>
+		    	<div class="order__submit">
+		    		<button class="form-btn form-btn--black">Готово <i class="ic"></i></button>
+		    	</div>
+	    	</div>
+	    </div>
+	</div>
+</section>
+<section class="work-history">
+	<div class="title">
+		<h2>История работы</h2>
+	</div>
+	<div class="container work-history__container">
+		<div class="work-history__items">
+			<div class="work-history__item">
+				<div class="work-history__item-box">
+					<div class="work-history__item-title">
+						<i class="main-icon"><i></i></i>
+						<span class="name">Иван Иванов</span>19.08.2016 Изменил статус на <strong>“В Вёрстке”</strong>
+					</div>
+					<div class="work-history__item-text">
+						Душа моя озарена неземной радостью, как эти чудесные весенние утра, которыми я наслаждаюсь от всего сердца. Я совсем один и блаженствую.
+					</div>
+				</div>
+				<div class="work-history__item-btns">
+					<a href="#" class="next">Пропустить <i class="ic"></i></a>
+					<a href="#" class="edit">Редактировать <i class="ic"></i></a>
+					<a href="#" class="remove">Удалить <i class="ic"></i></a>
+				</div>
+			</div>
+			<div class="work-history__item">
+				<div class="work-history__item-box">
+					<div class="work-history__item-title">
+						<i class="main-icon"><i></i></i>
+						<span class="name">Иван Иванов</span>19.08.2016 Изменил статус на <strong>“В Вёрстке”</strong>
+					</div>
+					<div class="work-history__item-text">
+						Душа моя озарена неземной радостью, как эти чудесные весенние утра, которыми я наслаждаюсь от всего сердца. Я совсем один и блаженствую.
+					</div>
+				</div>
+				<div class="work-history__item-btns">
+					<a href="#" class="next">Пропустить <i class="ic"></i></a>
+					<a href="#" class="edit">Редактировать <i class="ic"></i></a>
+					<a href="#" class="remove">Удалить <i class="ic"></i></a>
+				</div>
+			</div>
+			<div class="work-history__item">
+				<div class="work-history__item-box">
+					<div class="work-history__item-title">
+						<i class="main-icon"><i></i></i>
+						<span class="name">Иван Иванов</span>19.08.2016 Изменил статус на <strong>“В Вёрстке”</strong>
+					</div>
+					<div class="work-history__item-text">
+						Душа моя озарена неземной радостью, как эти чудесные весенние утра, которыми я наслаждаюсь от всего сердца. Я совсем один и блаженствую.
+					</div>
+				</div>
+				<div class="work-history__item-btns">
+					<a href="#" class="next">Пропустить <i class="ic"></i></a>
+					<a href="#" class="edit">Редактировать <i class="ic"></i></a>
+					<a href="#" class="remove">Удалить <i class="ic"></i></a>
+				</div>
+			</div>
+			<div class="work-history__item">
+				<div class="work-history__item-box">
+					<div class="work-history__item-title">
+						<i class="main-icon"><i></i></i>
+						<span class="name">Иван Иванов</span>19.08.2016 Изменил статус на <strong>“В Вёрстке”</strong>
+					</div>
+					<div class="work-history__item-text">
+						Душа моя озарена неземной радостью, как эти чудесные весенние утра, которыми я наслаждаюсь от всего сердца. Я совсем один и блаженствую.
+					</div>
+				</div>
+				<div class="work-history__item-btns">
+					<a href="#" class="next">Пропустить <i class="ic"></i></a>
+					<a href="#" class="edit">Редактировать <i class="ic"></i></a>
+					<a href="#" class="remove">Удалить <i class="ic"></i></a>
+				</div>
+			</div>
+			<div class="work-history__item">
+				<div class="work-history__item-box">
+					<div class="work-history__item-title">
+						<i class="main-icon"><i></i></i>
+						<span class="name">Иван Иванов</span>19.08.2016 Изменил статус на <strong>“В Вёрстке”</strong>
+					</div>
+					<div class="work-history__item-text">
+						Душа моя озарена неземной радостью, как эти чудесные весенние утра, которыми я наслаждаюсь от всего сердца. Я совсем один и блаженствую.
+					</div>
+				</div>
+				<div class="work-history__item-btns">
+					<a href="#" class="next">Пропустить <i class="ic"></i></a>
+					<a href="#" class="edit">Редактировать <i class="ic"></i></a>
+					<a href="#" class="remove">Удалить <i class="ic"></i></a>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+//= template/footer.html
