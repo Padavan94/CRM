@@ -23,10 +23,10 @@
             <a href="tel:+7 (499) 893-7023" class="flex-link"><i></i>+7 (499) <span> 893-7023</span></a>
           </div>
           <div class="nav-menu__login">
-            <a href="#" class="flex-link"><i class="ic"></i>Вход</a>
+            <a href=".login-popup" class="flex-link open-popup"><i class="ic"></i>Вход</a>
           </div>
           <div class="nav-menu__reg">
-            <a href="#" class="flex-link"><i class="ic"></i>Регистрация</a>
+            <a href=".registration-popup" class="flex-link open-popup"><i class="ic"></i>Регистрация</a>
           </div>
           <div class="nav-menu__catalog">
             <div class="dropdown">
@@ -44,11 +44,200 @@
             </div>
           </div>
           <div class="nav-menu__quest">
-            <a href="#">Часто задаваемые вопросы </a>
+            <a href="/faq.html">Часто задаваемые вопросы </a>
           </div>
         </div>
       </div>
     </header>
+
+
+    <!-- Все темплейты попапов -->
+    
+
+    <!-- форма входа -->
+    <div class="mfp-hide popup-template login-popup">
+      <i class="popup-template__close mfp-close"></i>
+      <div class="popup-template__title">Вход</div>
+      <div class="popup-template__form">
+        <div class="input input--light">
+          <label for="">Логин</label>
+          <input type="text" placeholder="Введите Ваш Логин">
+        </div>
+        <div class="input input--light">
+          <label for="">Пароль</label>
+          <input type="password" placeholder="Введите Ваш пароль">
+        </div>
+        <div class="popup-template__btns">
+          <a href=".alert-popup" class="btn action1 open-popup">Войти <i class="ic"></i></a>
+          <a href=".forgot-popup" class="btn action2 open-popup">Восстановление пароля <i class="ic"></i></a>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- неверный пароль -->
+    <div class="mfp-hide popup-template alert-popup">
+      <i class="popup-template__close mfp-close"></i>
+      
+      <div class="popup-template__title">Вход</div>
+      <div class="popup-template__form">
+        <div class="popup-template__alert">
+          Вы указали неверный логин или пароль.
+          Повторите попытку либо восстановите пароль»
+        </div>
+        <div class="input input--light">
+          <label for="">Логин</label>
+          <input type="text" placeholder="Введите Ваш Логин">
+        </div>
+        <div class="input input--light">
+          <label for="">Пароль</label>
+          <input type="text" placeholder="Введите Ваш пароль">
+        </div>
+        <div class="popup-template__btns">
+          <a href="#" class="btn action1">Войти <i class="ic"></i></a>
+          <a href=".forgot-popup" class="btn action2 open-popup">Восстановление пароля <i class="ic"></i></a>
+        </div>
+      </div>
+    </div>    
+
+    <!-- форма востановления -->
+    <div class="mfp-hide popup-template forgot-popup">
+      <i class="popup-template__close mfp-close"></i>
+      <div class="popup-template__title">Восстановление пароля</div>
+      <div class="popup-template__info">
+        Пожалуйста, введите адрес электронной почты, указанный
+        в параметрах Вашей учётной записи. Вам будет выслан
+        специальный проверочный код.
+      </div>
+      <div class="popup-template__form">
+        <div class="input input--light">
+          <label for="">Email</label>
+          <input type="text" placeholder="Введите Ваш e-mail">
+        </div>
+        <div class="popup-template__capcha">
+          <img src="/img/capcha.png" alt="capcha">
+        </div>
+        <div class="popup-template__btns">
+          <a href=".success-popup" class="btn action1 open-popup">Отправить <i class="ic"></i></a>
+        </div>
+      </div>
+    </div>
+    
+    <!-- форма при успехе -->
+    <div class="mfp-hide popup-template popup-template--yellow success-popup">
+      <i class="popup-template__close mfp-close"></i>
+      <div class="popup-template__title">Готово!</div>
+      <div class="popup-template__info">
+        Пожалуйста, проверте Вашу почту.
+        Вам выслан специальный проверочный код.
+      </div>
+      <div class="popup-template__btns">
+          <a href="/" class="btn action3">Перейти в каталог <i class="ic"></i></a>
+        </div>
+    </div>
+
+
+    <!-- форма регистрации -->
+    <div class="mfp-hide popup-template registration-popup">
+      <i class="popup-template__close mfp-close"></i>
+      <div class="popup-template__title">Регистрация</div>
+      <div class="popup-template__form">
+        <div class="input input--light">
+          <label for="">Логин</label>
+          <input type="text" placeholder="Введите Ваш Логин">
+        </div>
+        <div class="input input--light">
+          <label for="">Email</label>
+          <input type="text" placeholder="Введите Ваш e-mail">
+        </div>
+        <div class="input input--light">
+          <label for="">Телефон</label>
+          <input type="text" placeholder="Введите Ваш номер телефона">
+        </div>
+        <div class="input input--light">
+          <label for="">Город</label>
+          <div>
+            <select name="" id="">
+              <option value="">Одесса</option>
+              <option value="">Киев</option>
+            </select>
+            <i class="ic"></i>
+          </div>
+         
+        </div>
+        <div class="input input--light">
+          <label for="">Телефон</label>
+          <input type="text" placeholder="Введите Ваш номер телефона">
+        </div>
+        <div class="input input--light">
+          <label for="">Придумайте пароль</label>
+          <input type="password" placeholder="Не менее 4-х символов">
+        </div>
+        <div class="input input--light">
+          <label for="">Подтвердите пароль</label>
+          <input type="password" placeholder="">
+        </div>
+        <div class="popup-template__btns">
+          <a href=".edit-popup" class="btn action1 open-popup">Регистрация <i class="ic"></i></a>
+
+        </div>
+      </div>
+    </div>
+    
+
+    <!-- форма редактирования -->
+    <div class="mfp-hide popup-template edit-popup">
+      <i class="popup-template__close mfp-close"></i>
+      <div class="popup-template__title">Данные заказчика</div>
+      <div class="popup-template__form">
+        <div class="input input--light">
+          <label for="">Логин</label>
+          <input type="text" placeholder="Введите Ваш Логин">
+        </div>
+        <div class="input input--light">
+          <label for="">Email</label>
+          <input type="text" placeholder="Введите Ваш e-mail">
+        </div>
+        <div class="input input--light">
+          <label for="">Телефон</label>
+          <input type="text" placeholder="Введите Ваш номер телефона">
+        </div>
+        <div class="input input--light">
+          <label for="">Город</label>
+          <div>
+            <select name="" id="">
+              <option value="">Одесса</option>
+              <option value="">Киев</option>
+            </select>
+            <i class="ic"></i>
+          </div>
+         
+        </div>
+        <div class="input input--light">
+          <label for="">Телефон</label>
+          <input type="text" placeholder="Введите Ваш номер телефона">
+        </div>
+        <div class="input input--light">
+          <label for="">Пароль</label>
+          <input type="password" placeholder="Не менее 4-х символов">
+          <a href="#" class="change-pass"><i class="ic"></i>изменить пароль</a>
+        </div>
+        <div style="display: none;">
+          <div class="input input--light">
+            <label for="">Придумайте пароль</label>
+            <input type="password" placeholder="Не менее 4-х символов">
+          </div>
+          <div class="input input--light">
+            <label for="">Подтвердите пароль</label>
+            <input type="password" placeholder="">
+          </div>
+        </div>
+        <div class="popup-template__btns">
+          <a href=".alert-popup" class="btn action1 open-popup">Регистрация <i class="ic"></i></a>
+
+        </div>
+      </div>
+    </div>
 <section class="layout">
 	<div class="title">
 		<h2>СШ №22:</h2>

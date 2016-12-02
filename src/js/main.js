@@ -54,9 +54,13 @@ Dropzone.options.myAwesomeDropzone = { // The camelized version of the ID of the
 
 $(document).ready(function($) {
 
-	//add photos
+  $('.change-pass').click(function(event) {
+    event.preventDefault();
+    $(this).parent().next().slideToggle("slow");
+  });
 
-	$('.order__add-btn').magnificPopup({
+	//add photos
+	$('.order__add-btn, .open-popup').magnificPopup({
 	  type:'inline',
 	  midClick: true // Allow opening popup on middle mouse click. Always set it to true if you don't provide alternative source in href.
 	});
@@ -64,17 +68,17 @@ $(document).ready(function($) {
 
 	//paralax section
     $('.main-section').parallax({imageSrc: '/img/bg.png'});
-    $('.custom-section').parallax({imageSrc: '/img/block.jpg'});
-
+    /*$('.custom-section').parallax({imageSrc: '/img/block.jpg'});
+*/
 
     //resize paralax when content so large
     $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
-	  $(window).trigger('resize').trigger('scroll');
+	  /*$(window).trigger('resize').trigger('scroll');*/
 	})
 
 
 	//init owl carousels
-	 initialize_owl($('#owl1'));
+	 initialize_owl($('#owl0'));
 
 	 	var str = $(".layout__info").data("arr");
 	 	var jsonObj = $.parseJSON('[' + str + ']');
@@ -104,6 +108,7 @@ $(document).ready(function($) {
 
 
 function initTabs(array) {
+  initialize_owl($('#'+array[0].carousel));
 	array.forEach(function(item, i, arr) {
 		$('a[href="#'+item.tab+'"]').on('shown.bs.tab', function () {
         	initialize_owl($('#'+item.carousel));

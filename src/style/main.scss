@@ -523,7 +523,10 @@ body{
 
 .custom-section{
 	min-height: 468px;
-	background-color: transparent;
+	background-image: url("/img/block.jpg");
+	background-position: center top;
+	background-size: cover;
+	background-repeat: no-repeat;
 	padding: 66px 0px;
 	&__container{
 		display: flex;
@@ -538,6 +541,7 @@ body{
 		color: #fff;
 		text-align: center;
 		margin-bottom: 37px;
+		width: 100%;
 	}
 	&__btn{
 		border: 3px solid white;
@@ -1735,5 +1739,168 @@ body{
 	&__send{
 		@extend .reg-login__submit;
 		margin-right: 0;
+	}
+}
+
+.popup-template{
+	max-width: 611px;
+	background-color: #fff;
+	padding: 80px 60px;
+	border-radius: 2px;
+	position: relative;
+	margin: 0 auto;
+	&__title{
+		color: #424242;
+		font-family: "Roboto-b";
+		font-size: 26px;
+		text-align: center;
+		margin-bottom: 40px;
+		position: relative;
+		&:after{
+			content:"";
+			position: absolute;
+			left: 50%;
+			margin-left: -10px;
+			height: 3px;
+			width: 20px;
+			background-color: #303030;
+			top: calc(100% + 5px);
+		}
+	}
+	.input{
+		label{
+			font-family: "Roboto-b";
+			font-size: 15px;
+		}
+		select{
+			box-shadow: 0 1px 3px rgba(11, 13, 13, 0.22);
+			background-color: #eff3f3;
+		}
+	}
+	.change-pass{
+		text-transform: uppercase;
+		font-family: "Roboto-b";
+		margin-top: 10px;
+		color: #424242;
+		border-bottom: 3px solid $brand;
+		&:hover{
+			border-bottom-color: transparent;
+		}
+		i{
+			@include sprite($registration-icon);
+			margin-right: 8px;
+		}
+	}
+	&__btns{
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		.action1{
+			box-shadow: 0 1px 10px rgba(0, 0, 0, 0.23);
+			border-radius: 7px;
+			background-color: #689f38;
+			width: 289px;
+			height: 57px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			font-size: 17px;
+			font-family: "Roboto-b";
+			color: #fff;
+			margin-bottom: 14px;
+			i{
+				@include sprite($check4);
+				margin-left: 6px;
+			}
+			&:hover{
+				background-color: #689f38 - 20;
+			}
+		}
+		.action2{
+			background-color: #303030;
+			border-radius: 7px;
+			box-shadow: 0 5px 13px rgba(11, 13, 13, 0.15);
+			width: 289px;
+			height: 56px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			font-size: 17px;
+			font-family: "Roboto-b";
+			color: $brand;
+			margin-bottom: 14px;
+			i{
+				@include sprite($arrow5);
+				margin-left: 6px;
+			}
+			&:hover{
+				background-color: #303030 - 20;
+			}
+		}
+		.action3{
+			width: 244px;
+			height: 57px;
+			background-color: #fff;
+			border-radius: 7px;
+			box-shadow: 0 1px 10px rgba(0, 0, 0, 0.23);
+			font-size: 17px;
+			font-family: "Roboto-b";
+			font-size: 17px;
+			color: #303030;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			&:hover{
+				background-color: #fff - 20;
+			}
+		}
+	}
+	&__close{
+		top: 9px;
+		right: 9px;
+		display: inline-block;
+		cursor: pointer;
+		@include sprite($close);
+	}
+	&__info{
+		text-align: center;
+		font-size: 16px;
+		color: #424242;
+		font-family: "Roboto-m";
+		margin-bottom: 25px;
+	}
+	&__capcha{
+		text-align: center;
+		margin-bottom: 23px;
+	}
+	&__form{
+		position: relative;
+	}
+	&__alert{
+		border-radius: 2px;
+		box-shadow: 0 2px 5px rgba(0, 0, 0, 0.21);
+		background-color: $brand;
+		width: 100%;
+		padding: 17px 0px;
+		color: #303030;
+		font-size: 16px;
+		text-align: center;
+		position: absolute;
+		z-index: 20;
+		bottom: calc(100% + 10px);
+		&:after{
+			content: "";
+			position: absolute;
+			top: 100%;
+			left: 50%;
+			border: 9px solid transparent;
+			margin-left: -9px;
+			border-top-color: $brand;
+		}
+	}
+
+
+	&--yellow{
+		background-color: $brand;
 	}
 }
