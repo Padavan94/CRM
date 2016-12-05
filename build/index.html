@@ -35,11 +35,8 @@
                 <i></i>
               </button>
               <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-                <li><a href="#">Action</a></li>
-                <li><a href="#">Another action</a></li>
-                <li><a href="#">Something else here</a></li>
-                <li role="separator" class="divider"></li>
-                <li><a href="#">Separated link</a></li>
+                <li><a href="/photobooks.html">Фотокниги</a></li>
+                <li><a href="/polygraph.html">Полиграфия</a></li>
               </ul>
             </div>
           </div>
@@ -53,6 +50,26 @@
 
     <!-- Все темплейты попапов -->
     
+    
+    <!-- форма входа -->
+    <div class="mfp-hide popup-template order-popup">
+      <i class="popup-template__close mfp-close"></i>
+      <div class="popup-template__title">Заказать звонок</div>
+      <div class="popup-template__form">
+        <div class="input input--light">
+          <label for="">Имя</label>
+          <input type="text" placeholder="Введите Ваше имя">
+        </div>
+        <div class="input input--light">
+          <label for="">Телефон</label>
+          <input type="text" placeholder="Введите Ваш телефон">
+        </div>
+        <div class="popup-template__btns">
+          <a href=".alert-popup" class="btn action1 open-popup">Заказать <i class="ic"></i></a>
+        </div>
+      </div>
+    </div>
+
 
     <!-- форма входа -->
     <div class="mfp-hide popup-template login-popup">
@@ -132,7 +149,19 @@
         Вам выслан специальный проверочный код.
       </div>
       <div class="popup-template__btns">
-          <a href="/" class="btn action3">Перейти в каталог <i class="ic"></i></a>
+          <a href="/photobooks.html" class="btn action3">Перейти в каталог <i class="ic"></i></a>
+        </div>
+    </div>
+
+    <!-- форма при успехе -->
+    <div class="mfp-hide popup-template popup-template--yellow success-popup2">
+      <i class="popup-template__close mfp-close"></i>
+      <div class="popup-template__title">Готово!</div>
+      <div class="popup-template__info">
+        Ваш заказ создан! <br> За ходом его выполнения Вы можете следить в личном кабинете.
+      </div>
+      <div class="popup-template__btns">
+          <a href="/task-zakazchik.html" class="btn action3">Просмотреть заказ <i class="ic"></i></a>
         </div>
     </div>
 
@@ -243,8 +272,8 @@
 		<h1>СЕРВИС ПЕЧАТИ</h1>
 	</div>
 	<div class="main-section__subtitle">фотокниги полиграфии</div>
-	<a href="#" class="btn main-section__btn">Заказать звонок</a>
-	<a href="#" class="btn main-section__btn">Перейти в каталог</a>
+	<a href=".order-popup" class="btn main-section__btn open-popup">Заказать звонок</a>
+	<a href="/photobooks.html" class="btn main-section__btn">Перейти в каталог</a>
 </section>
 <section class="how-work">
 	<div class="title how-work__title">
@@ -483,10 +512,10 @@
             <a href="tel:+7 (499) 893-7023" class="flex-link"><i></i>+7 (499) <span> 893-7023</span></a>
           </div>
           <div class="nav-menu__login">
-            <a href="#" class="flex-link"><i class="ic"></i>Вход</a>
+            <a href=".login-popup" class="flex-link open-popup"><i class="ic"></i>Вход</a>
           </div>
           <div class="nav-menu__reg">
-            <a href="#" class="flex-link"><i class="ic"></i>Регистрация</a>
+            <a href=".registration-popup" class="flex-link open-popup"><i class="ic"></i>Регистрация</a>
           </div>
           <div class="nav-menu__catalog">
             <div class="dropdown">
@@ -495,16 +524,13 @@
                 <i></i>
               </button>
               <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-                <li><a href="#">Action</a></li>
-                <li><a href="#">Another action</a></li>
-                <li><a href="#">Something else here</a></li>
-                <li role="separator" class="divider"></li>
-                <li><a href="#">Separated link</a></li>
+                <li><a href="/photobooks.html">Фотокниги</a></li>
+                <li><a href="/polygraph.html">Полиграфия</a></li>
               </ul>
             </div>
           </div>
           <div class="nav-menu__quest">
-            <a href="#">Часто задаваемые вопросы </a>
+            <a href="/faq.html">Часто задаваемые вопросы </a>
           </div>
         </div>
       </div>

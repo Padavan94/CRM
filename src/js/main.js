@@ -54,6 +54,55 @@ Dropzone.options.myAwesomeDropzone = { // The camelized version of the ID of the
 
 $(document).ready(function($) {
 
+$('.gallery-popup').each(function() { // the containers for all your galleries
+    $(this).magnificPopup({
+        delegate: '.popup-img', // the selector for gallery item
+        type: 'image',
+        gallery: {
+          enabled:true
+        }
+    });
+});
+
+
+//eto takoi pizdec
+/*
+$(".step1").click(function(event) {
+  event.preventDefault();
+  $("#collapseOne").collapse("toggle");
+  var offset = 20;
+  $('html, body').animate({
+        scrollTop: $("#collapseOne").offset().top
+    }, 500);
+});
+
+$(".step2").click(function(event) {
+  event.preventDefault();
+  $("#collapseOne").collapse("toggle");
+  $("#collapseTwo").collapse("toggle");
+  
+});
+
+
+$('#collapseOne').on('shown.bs.collapse', function () {
+  $('html, body').animate({
+        scrollTop: $("#collapseOne").offset().top
+    }, 500);
+})
+
+$('#collapseTwo').on('shown.bs.collapse', function () {
+  $('html, body').animate({
+        scrollTop: $("#collapseTwo").offset().top
+    }, 500);
+})*/
+
+
+//konec pizdeca
+
+
+
+
+
   $('.change-pass').click(function(event) {
     event.preventDefault();
     $(this).parent().next().slideToggle("slow");

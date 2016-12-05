@@ -35,11 +35,8 @@
                 <i></i>
               </button>
               <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-                <li><a href="#">Action</a></li>
-                <li><a href="#">Another action</a></li>
-                <li><a href="#">Something else here</a></li>
-                <li role="separator" class="divider"></li>
-                <li><a href="#">Separated link</a></li>
+                <li><a href="/photobooks.html">Фотокниги</a></li>
+                <li><a href="/polygraph.html">Полиграфия</a></li>
               </ul>
             </div>
           </div>
@@ -53,6 +50,26 @@
 
     <!-- Все темплейты попапов -->
     
+    
+    <!-- форма входа -->
+    <div class="mfp-hide popup-template order-popup">
+      <i class="popup-template__close mfp-close"></i>
+      <div class="popup-template__title">Заказать звонок</div>
+      <div class="popup-template__form">
+        <div class="input input--light">
+          <label for="">Имя</label>
+          <input type="text" placeholder="Введите Ваше имя">
+        </div>
+        <div class="input input--light">
+          <label for="">Телефон</label>
+          <input type="text" placeholder="Введите Ваш телефон">
+        </div>
+        <div class="popup-template__btns">
+          <a href=".alert-popup" class="btn action1 open-popup">Заказать <i class="ic"></i></a>
+        </div>
+      </div>
+    </div>
+
 
     <!-- форма входа -->
     <div class="mfp-hide popup-template login-popup">
@@ -132,7 +149,19 @@
         Вам выслан специальный проверочный код.
       </div>
       <div class="popup-template__btns">
-          <a href="/" class="btn action3">Перейти в каталог <i class="ic"></i></a>
+          <a href="/photobooks.html" class="btn action3">Перейти в каталог <i class="ic"></i></a>
+        </div>
+    </div>
+
+    <!-- форма при успехе -->
+    <div class="mfp-hide popup-template popup-template--yellow success-popup2">
+      <i class="popup-template__close mfp-close"></i>
+      <div class="popup-template__title">Готово!</div>
+      <div class="popup-template__info">
+        Ваш заказ создан! <br> За ходом его выполнения Вы можете следить в личном кабинете.
+      </div>
+      <div class="popup-template__btns">
+          <a href="/task-zakazchik.html" class="btn action3">Просмотреть заказ <i class="ic"></i></a>
         </div>
     </div>
 
@@ -273,14 +302,20 @@
 		 		</div>
 		 		<div class="gallery__user-info">
 		 			<div class="gallery-info-box gallery__dis">
-		 				<div class="position"><i class="ic"></i>верстальщик::</div>
+		 				<div class="position"><i class="ic"></i>заказчик:</div>
 		 				<div class="name">Пётр Петров</div>
+		 				<div class="complete">Выполнено проектов <span>(12)</span></div>
+		 				<div class="inProgress">Выполнено проектов <span> (1)</span></div>
+		 				<div class="scool">Школа <span>(СШ № 55)</span></div>
+		 				<div class="clas">Класс: <span>(a)</span></div>
 		 			</div>
 		 		</div>
 		 		<div class="gallery__user-info">
 		 			<div class="gallery-info-box gallery__dis">
 		 				<div class="position"><i class="ic"></i>верстальщик::</div>
 		 				<div class="name">Пётр Петров</div>
+		 				<div class="complete">Выполнено проектов <span>(12)</span></div>
+		 				<div class="inProgress">Выполнено проектов<span> (1)</span></div>
 		 			</div>
 		 		</div>
 			 	
@@ -305,7 +340,97 @@
 				</div>
 			</div>
 		</form>
-		
+		<div class="show-block">
+			<div class="show-block__item">
+				<h4>ДЕТИ:</h4>
+			    <a href=".drope-popup" class="open-popup skin-add show-block__add-btn">Смотреть <i class="ic"></i></a>
+			    <div class="info">Всего <span>(0 фото)</span></div>
+			</div>
+			<div class="show-block__item">
+				<h4>ДЕТИ:</h4>
+			    <a href=".drope-popup" class="open-popup skin-add show-block__add-btn">Смотреть <i class="ic"></i></a>
+			    <div class="info">Всего <span>(0 фото)</span></div>
+			</div>
+			<div class="show-block__item">
+				<h4>ДЕТИ:</h4>
+			    <a href=".drope-popup" class="open-popup skin-add show-block__add-btn">Смотреть <i class="ic"></i></a>
+			    <div class="info">Всего <span>(0 фото)</span></div>
+			</div>
+		</div>
+
+
+		<!-- dropzones для каждого из разделов -->
+		<div class="drope-popup mfp-hide">
+			<div class="drope-popup__title">
+				Дети
+			</div>
+			<div class="drope-popup__inner">
+				<div class="drope-popup__add">
+					<a href="#" class="skin-add drope-popup__add-btn">Добавить фото <i class="ic"></i></a>
+				</div>
+				<form action="/file-upload" class="dropzone" id="my-awesome-dropzone">
+				</form>
+				<div class="drope-popup__btns">
+					<a href="#" class="upl">Загрузить архив <i class="ic"></i></a>
+					<a href="#" class="ready">Готово <i class="ic"></i></a>
+				</div>
+			</div>
+			
+		</div>
+
+
+
+
+
+
+
+
+		<ul class="gallery-popup order__previews ">
+			<li class="order__prev">
+				<div class="order__prev-title">Обложка</div>
+				<div class="order__prev-img popup-img" data-mfp-src="http://i.5sfer.com/post/postImage/8ipwnn.jpg" style="background-image: url('/img/order1.jpg');">
+					<a href="#" class="order__prev-close"><i class="ic"></i></a>
+				</div>
+				<div class="order__prev-upload">
+					<div class="upload">
+						<input type="file" id="file1">
+						<label for="file1">Загрузить <i class="ic"></i></label>
+					</div>
+				</div>
+			</li>
+			<li class="order__prev">
+				<div class="order__prev-title">Разворот 1</div>
+				<div class="order__prev-img popup-img" data-mfp-src="http://cdn.fishki.net/upload/post/201411/26/1334081/57542_trava_priroda_doroga_leto_1920x1200_wwwgdefonru.jpg" style="background-image: url('/img/order1.jpg');">
+					<a href="#" class="order__prev-close"><i class="ic"></i></a>
+				</div>
+				<div class="order__prev-upload">
+					<div class="upload">
+						<input type="file" id="file2">
+						<label for="file2">Загрузить <i class="ic"></i></label>
+					</div>
+				</div>
+			</li>
+			<li class="order__prev">
+				<div class="order__prev-title">Разворот 2</div>
+				<div class="order__prev-img popup-img" data-mfp-src="http://zefirka.net/wp-content/uploads/2015/08/samaya-krasivaya-priroda-dlya-puteshestvij-sovsem-ryadom-1.jpg" style="background-image: url('/img/order1.jpg');">
+					<a href="#" class="order__prev-close"><i class="ic"></i></a>
+				</div>
+				<div class="order__prev-upload">
+					<div class="upload">
+						<input type="file" id="file3">
+						<label for="file3">Загрузить <i class="ic"></i></label>
+					</div>
+				</div>
+			</li>
+		</ul>
+		<div class="order__btn-group task-group">
+    		<div class="task-status__send">
+				<button class="flex-link"><span>Оформить заказ</span><i class="ic"></i></button>
+			</div>
+	    	<div class="order__submit">
+	    		<button class="form-btn form-btn--green">Готово <i class="ic"></i></button>
+	    	</div>
+	    </div>
 	</div>
 </section>
 <div class="comment-section">
@@ -365,10 +490,10 @@
             <a href="tel:+7 (499) 893-7023" class="flex-link"><i></i>+7 (499) <span> 893-7023</span></a>
           </div>
           <div class="nav-menu__login">
-            <a href="#" class="flex-link"><i class="ic"></i>Вход</a>
+            <a href=".login-popup" class="flex-link open-popup"><i class="ic"></i>Вход</a>
           </div>
           <div class="nav-menu__reg">
-            <a href="#" class="flex-link"><i class="ic"></i>Регистрация</a>
+            <a href=".registration-popup" class="flex-link open-popup"><i class="ic"></i>Регистрация</a>
           </div>
           <div class="nav-menu__catalog">
             <div class="dropdown">
@@ -377,16 +502,13 @@
                 <i></i>
               </button>
               <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-                <li><a href="#">Action</a></li>
-                <li><a href="#">Another action</a></li>
-                <li><a href="#">Something else here</a></li>
-                <li role="separator" class="divider"></li>
-                <li><a href="#">Separated link</a></li>
+                <li><a href="/photobooks.html">Фотокниги</a></li>
+                <li><a href="/polygraph.html">Полиграфия</a></li>
               </ul>
             </div>
           </div>
           <div class="nav-menu__quest">
-            <a href="#">Часто задаваемые вопросы </a>
+            <a href="/faq.html">Часто задаваемые вопросы </a>
           </div>
         </div>
       </div>

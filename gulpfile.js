@@ -74,9 +74,9 @@ gulp.task('html:build', function () {
 gulp.task('js:build', function () {
     gulp.src(path.src.js) 
         .pipe(rigger()) 
-        .pipe(sourcemaps.init()) 
-        .pipe(uglify()) 
-        .pipe(sourcemaps.write()) 
+        /*.pipe(sourcemaps.init()) */
+        /*.pipe(uglify()) */
+        /*.pipe(sourcemaps.write()) */
         .pipe(gulp.dest(path.build.js))
         .pipe(reload({stream: true}));
 });
@@ -85,7 +85,7 @@ gulp.task('js:build', function () {
 gulp.task('style:build', function () {
     gulp.src(path.src.style) 
         .pipe(plumber())
-        .pipe(sourcemaps.init())
+        /*.pipe(sourcemaps.init())*/
         .pipe(sass({
             includePaths: ['src/style/'],
             outputStyle: 'compressed',
@@ -94,7 +94,7 @@ gulp.task('style:build', function () {
         }))
         .pipe(prefixer({ browsers: ['last 4 versions'] }))
         .pipe(cssmin({keepSpecialComments : 0}))
-        .pipe(sourcemaps.write())
+        /*.pipe(sourcemaps.write())*/
         .pipe(gulp.dest(path.build.css))
         .pipe(reload({stream: true}));
 });

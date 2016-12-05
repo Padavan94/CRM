@@ -21,6 +21,8 @@
 	outline: none !important;
 }
 
+
+
 body{
 	font-family: "Roboto";
 	letter-spacing: .7px;
@@ -820,17 +822,26 @@ body{
 .gallery-info-box{
 	display: flex;
 	margin-right: 47px;
+	flex-wrap: wrap;
+	flex: 1 1 0%;
 	.position{
 		text-transform: uppercase;
 		font-size: 14px;
 		color: #656565;
 		margin-right: 13px;
+		min-width: 132px;
 		
 	}
 	.name{
 		color: #424242;
 		font-size: 14px;
-		
+		font-family: "Roboto-b";
+	}
+	div{
+		margin-right: 40px;
+		span{
+			font-family: "Roboto-b";
+		}
 	}
 
 }
@@ -944,7 +955,7 @@ body{
 
 
 .task-status{
-	flex: 1 1 0%;
+	width: 100%;
 	&--zakaz{
 		.task-status__tape{
 			& > *{
@@ -1208,26 +1219,7 @@ body{
 }
 
 
-.form-btn{ 
-	border-radius: 7px;
-	box-shadow: 0 1px 16px rgba(0, 0, 0, 0.22);
-	background-color: $brand;
-	padding: 13px 43px;
-	color: #303030;
-	font-size: 17px;
-	font-family: "Roboto-b";
-	border: none;
-	&:hover{
-		background-color: $brand - 20;
-	}
-	&--black{
-		background-color: #303030;
-		color: $brand;
-		&:hover{
-			background-color: #303030 - 20;
-		}
-	}
-}
+
 
 .reg-login{
 	padding: 70px 0px;
@@ -1376,6 +1368,7 @@ body{
 		padding-left: 0;
 		margin-bottom: 0px;
 		margin-top: 24px;
+		width: 100%;
 	}
 	&__prev{
 		margin-right: 25px;
@@ -1391,6 +1384,23 @@ body{
 		box-shadow: 0 1px 3px rgba(0, 0, 0, 0.27);
 		margin-bottom: 8px;
 		position: relative;
+		cursor: pointer;
+		&:after{
+			content: "";
+			@include sprite($eye3);
+			opacity: 0;
+			transition: all .2s ease-in;
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			transform: translate(-50%,-40%);
+		}
+		&:hover{
+			&:after{
+				opacity: 1;
+				transform: translate(-50%,-50%);
+			}
+		}
 	}
 	&__prev-name,
 	&__prev-size{
@@ -1902,5 +1912,65 @@ body{
 
 	&--yellow{
 		background-color: $brand;
+	}
+}
+
+.show-block{
+	width: 100%;
+	display: flex;
+	margin-bottom: 25px;
+	&__item{
+		margin-right: 34px;
+	}
+	&__add-btn{
+		@extend .order__add-btn;
+		i{
+			@include sprite($eye2);
+		}
+	}
+	.info{
+		color: #767676;
+		margin-top: 10px;
+		display: block;
+		span{
+			color: #424242;
+			font-family: "Roboto-m";
+		}
+	}
+}
+
+.task-group{
+	width: 100%;
+}
+
+.form-btn{ 
+	border-radius: 7px;
+	box-shadow: 0 1px 16px rgba(0, 0, 0, 0.22);
+	background-color: $brand;
+	padding: 13px 43px;
+	color: #303030;
+	font-size: 17px;
+	font-family: "Roboto-b";
+	border: none;
+	&:hover{
+		background-color: $brand - 20;
+	}
+	&--black{
+		background-color: #303030;
+		color: $brand;
+		&:hover{
+			background-color: #303030 - 20;
+		}
+	}
+	&--green{
+		background-color: #689f38;
+		color: #fff;
+		&:hover{
+			background-color: #689f38 - 20;
+		}
+		i{
+			@include sprite($check4);
+			background-position: $check4-offset-x $check4-offset-y !important;
+		}
 	}
 }

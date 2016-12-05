@@ -251,7 +251,7 @@
 				<span class="price">348 грн.</span>
 			</div>
 			<div class="task-status__send">
-				<button class="flex-link"><span>Оформить заказ</span><i class="ic"></i></button>
+				<button class="flex-link step1"><span>Оформить заказ</span><i class="ic"></i></button>
 			</div>
 		</form>
 	</div>
@@ -261,12 +261,12 @@
   <div class="panel panel-default">
     <div class="panel-heading text-center" role="tab" id="headingOne">
       <h4 class="panel-title">
-        <a role="button" class="flex-link" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+        <a role="button" class="flex-link" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
         	<span class="circle"><i class="ic"></i></span><span>Вход / регистрация</span>
         </a>
       </h4>
     </div>
-    <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+    <div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
       <div class="panel-body">
         <div class="reg-login">
         	<div class="container">
@@ -283,7 +283,7 @@
 				        		<input type="password" placeholder="Введите пароль">
 				        	</div>
 				        	<div class="reg-login__bottom">
-				        		<button class="form-btn reg-login__submit">Войти<i class="ic"></i></button>
+				        		<button class="form-btn reg-login__submit step2">Войти<i class="ic"></i></button>
 				        		<a href="#">Восстановление пароля</a>
 				        	</div>
 				        	
@@ -323,7 +323,7 @@
 				        	</div>
 				        	<div class="reg-login__bottom ">
 				        		<div class="reg-login__submit2">
-									<button class="form-btn form-btn--black">Регистрация <i class="ic"></i></button>
+									<button class="form-btn form-btn--black step2">Регистрация <i class="ic"></i></button>
 				        		</div>
 				        		
 				        	</div>
@@ -341,12 +341,12 @@
   <div class="panel panel-default">
     <div class="panel-heading text-center" role="tab" id="headingTwo">
       <h4 class="panel-title">
-        <a class="collapsed flex-link" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+        <a class="collapsed flex-link" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
         	<span class="circle"><i class="ic"></i></span><span>оформление заказа</span>
         </a>
       </h4>
     </div>
-    <div id="collapseTwo" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingTwo">
+    <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
       <div class="panel-body">
         <div class="order">
         	<div class="container order__container">
@@ -414,11 +414,11 @@
 
 
 
-			        		<ul class="order__previews">
+			        		<!-- <ul class="order__previews">
 			        			<li class="order__prev">
 			        				<div class="order__prev-title">Обложка</div>
 			        				<div class="order__prev-img" style="background-image: url('/img/order1.jpg');">
-										<a href="#" class="order__prev-close"><i class="ic"></i></a>
+			        												<a href="#" class="order__prev-close"><i class="ic"></i></a>
 			        				</div>
 			        				<div class="order__prev-upload">
 			        					<div class="upload">
@@ -430,7 +430,7 @@
 			        			<li class="order__prev">
 			        				<div class="order__prev-title">Разворот 1</div>
 			        				<div class="order__prev-img" style="background-image: url('/img/order1.jpg');">
-										<a href="#" class="order__prev-close"><i class="ic"></i></a>
+			        												<a href="#" class="order__prev-close"><i class="ic"></i></a>
 			        				</div>
 			        				<div class="order__prev-upload">
 			        					<div class="upload">
@@ -442,7 +442,7 @@
 			        			<li class="order__prev">
 			        				<div class="order__prev-title">Разворот 2</div>
 			        				<div class="order__prev-img" style="background-image: url('/img/order1.jpg');">
-										<a href="#" class="order__prev-close"><i class="ic"></i></a>
+			        												<a href="#" class="order__prev-close"><i class="ic"></i></a>
 			        				</div>
 			        				<div class="order__prev-upload">
 			        					<div class="upload">
@@ -451,8 +451,8 @@
 			        					</div>
 			        				</div>
 			        			</li>
-
-			        		</ul>
+			        		
+			        		</ul> -->
 			        	</div>
 			        	<div class="order__group">
 			        		<h4>УЧИТЕЛЯ:</h4>
@@ -463,7 +463,7 @@
 			        		<a href="#" class="skin-add order__add-btn">Добавить фото <i class="ic"></i></a>
 			        	</div>
 			        	<div class="order__submit">
-			        		<button class="form-btn form-btn--black">Готово <i class="ic"></i></button>
+			        		<button data-mfp-src=".success-popup2"  class="form-btn form-btn--black open-popup">Готово <i class="ic"></i></button>
 			        	</div>
 			        </div>
         		</form>
